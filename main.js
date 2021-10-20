@@ -2,6 +2,8 @@ var dataNum = "";
 var screen = "0";
 var clicks = 0;
 var result = 0;
+var signos = ["+", "-", "*", "/"];
+var operations = ["suma", "resta", "multi", "div"];
 
 function nums(dataNum) {
   if (screen === "0") {
@@ -40,7 +42,6 @@ function igual() {
   document.getElementsByClassName("resultado")[0].innerHTML = result;
 }
 
-/* 
 function del() {
   var number = screen;
   var delate = number.substring(0, number.length - 1);
@@ -52,4 +53,3 @@ function del() {
     document.getElementsByClassName("resultado")[0].innerHTML = screen;
   }
 }
- */
