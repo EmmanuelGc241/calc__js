@@ -35,10 +35,6 @@ function suma() {
   }
   clicks++;
   clear();
-}
-
-function igual() {
-  suma();
   document.getElementsByClassName("resultado")[0].innerHTML = result;
 }
 
