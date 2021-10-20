@@ -31,12 +31,16 @@ function suma() {
   } else {
     result += screen;
   }
-
   clicks++;
   clear();
+}
+
+function igual() {
+  suma();
   document.getElementsByClassName("resultado")[0].innerHTML = result;
 }
 
+/* 
 function del() {
   var number = screen;
   var delate = number.substring(0, number.length - 1);
@@ -48,3 +52,4 @@ function del() {
     document.getElementsByClassName("resultado")[0].innerHTML = screen;
   }
 }
+ */
