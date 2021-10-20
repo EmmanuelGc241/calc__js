@@ -1,31 +1,31 @@
 let dataNum = "";
-let result = "";
+let screen = "";
 let borrar = "0";
 
 function nums(dataNum) {
-  if (result === "0") {
-    result = "";
+  if (screen === "0") {
+    screen = "";
   }
-  result = result + dataNum;
+  screen = screen + dataNum;
 
-  document.getElementsByClassName("resultado")[0].innerHTML = result;
+  document.getElementsByClassName("resultado")[0].innerHTML = screen;
 
   console.log(dataNum);
 }
 
 function deleteAll() {
-  result = dataNum + borrar;
-  document.getElementsByClassName("resultado")[0].innerHTML = result;
+  screen = dataNum + borrar;
+  document.getElementsByClassName("resultado")[0].innerHTML = screen;
 }
 //
 function del() {
-  var number = result;
+  var number = screen;
   var delate = number.substring(0, number.length - 1);
   document.getElementsByClassName("resultado")[0].innerHTML = delate;
-  result = result.substring(0, result.length - 1);
+  screen = screen.substring(0, screen.length - 1);
 
-  if (result == 0) {
-    result = "0";
-    document.getElementsByClassName("resultado")[0].innerHTML = result;
+  if (screen == 0) {
+    screen = "0";
+    document.getElementsByClassName("resultado")[0].innerHTML = screen;
   }
 }
