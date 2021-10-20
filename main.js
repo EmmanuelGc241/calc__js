@@ -1,6 +1,7 @@
-let dataNum = "";
-let screen = "";
-let borrar = "0";
+var dataNum = "";
+var screen = "0";
+var clicks = 0;
+var result = 0;
 
 function nums(dataNum) {
   if (screen === "0") {
@@ -9,22 +10,40 @@ function nums(dataNum) {
   screen = screen + dataNum;
 
   document.getElementsByClassName("resultado")[0].innerHTML = screen;
-
-  console.log(dataNum);
 }
 
 function deleteAll() {
-  screen = dataNum + borrar;
+  screen = "0";
+  clicks = 0;
+  result = 0;
   document.getElementsByClassName("resultado")[0].innerHTML = screen;
 }
-//
+function clear() {
+  screen = "0";
+  document.getElementsByClassName("resultado")[0].innerHTML = screen;
+}
+
+function suma() {
+  screen = parseFloat(screen);
+
+  if (clicks == 0) {
+    result = screen;
+  } else {
+    result += screen;
+  }
+
+  clicks++;
+  clear();
+  document.getElementsByClassName("resultado")[0].innerHTML = result;
+}
+
 function del() {
   var number = screen;
   var delate = number.substring(0, number.length - 1);
   document.getElementsByClassName("resultado")[0].innerHTML = delate;
   screen = screen.substring(0, screen.length - 1);
 
-  if (screen == 0) {
+  if (screen.length == 0) {
     screen = "0";
     document.getElementsByClassName("resultado")[0].innerHTML = screen;
   }
